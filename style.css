@@ -71,19 +71,19 @@ body{
     transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
 }
 
-.sec{
+#sec{
     width: 5px;
     height: 45%;
     background-color: red;
 }
 
-.min{
+#min{
     width: 7px;
     height: 40%;
     background-color: black;
 }
 
-.hour{
+#hour{
     width: 10px;
     height: 35%;
     background-color: black;
