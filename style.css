@@ -5,6 +5,11 @@
 
 body{
     background: linear-gradient(to right, hsl(200, 100%, 50%), hsl(175, 100%, 50%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .clock {
@@ -16,6 +21,20 @@ body{
     position: relative;
 }
 
+.clock::after{
+    content: '';
+    z-index: 11;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+}
+
 .number {
     --rotation: 0;
     position: absolute;
@@ -23,6 +42,7 @@ body{
     height: 100%;
     text-align: center;
     transform: rotate(var(--rotation));
+    font-size: 1.5rem;
 }
 
 .number1 {--rotation: 30deg}
